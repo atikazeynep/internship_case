@@ -10,7 +10,7 @@ public class RandomEarthquakeGeneratorTest {
         int numberOfTests = 100; // Number of random earthquake data instances to generate
 
         for (int i = 0; i < numberOfTests; i++) {
-            EarthquakeData earthquakeData = RandomEarthquakeGenerator.generateRandomEarthquakeData();
+            EarthquakeData earthquakeData = EarthquakeService.generateRandomEarthquakeData();
 
             // Verify latitude falls within the range -90 to 90
             assertTrue("Latitude should be between -90 and 90",
