@@ -1,2 +1,10 @@
-package com.example.demo;public class RandomEarthquakeGenerator {
+package com.example.demo;
+
+import java.util.Random;
+
+public class RandomEarthquakeGenerator {
+
+
+
 }
+
