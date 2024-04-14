@@ -23,7 +23,7 @@ Proogramı çalıştırmak için aşağıdaki önkoşulları sağlamalısınız:
 2. Proje dizinine gidin:
 
     ```bash
-    cd project-directory
+    cd kartaca_internship_case
     ```
 
 3. Projeyi Docker Compose kullanarak ayağa kaldırın:
