@@ -1,50 +1,51 @@
-Kartaca Staj Projesi
-Hazırlayan: Atika Zeynep Evmez
+# Kartaca Staj Projesi
+
+## Hazırlayan: Atika Zeynep Evmez
 
 Bu program Kartaca Çekirdekten Yetişenler Programı başvurusu için hazırlanmıştır.
 
 Program basit bir panel içerisinde, dünya haritası üzerinde anormal depremleri gösterebilecek bir web uygulamasıdır.
-Önkoşullar
+
+## Önkoşullar
 
 Proogramı çalıştırmak için aşağıdaki önkoşulları sağlamalısınız:
+- Docker yüklemiş olmanız gerekiyor. [Docker'ı Yükle](https://docs.docker.com/get-docker/)
+- Docker-compose yüklemiş olmanız gerekiyor. [Docker Compose'yi Yükle](https://docs.docker.com/compose/install/)
 
-    Docker yüklemiş olmanız gerekiyor. Docker'ı Yükle
-    Docker-compose yüklemiş olmanız gerekiyor. Docker Compose'yi Yükle
+## Başlarken
 
-Başlarken
+1. Depoyu klonlayın:
 
-    Depoyu klonlayın:
+    ```bash
+    git clone git@github.com:atikazeynep/kartaca_internship_case.git
+    ```
 
-    bash
+2. Proje dizinine gidin:
 
-git clone git@github.com:atikazeynep/kartaca_internship_case.git
+    ```bash
+    cd project-directory
+    ```
 
-Proje dizinine gidin:
+3. Projeyi Docker Compose kullanarak ayağa kaldırın:
 
-bash
+    ```bash
+    docker-compose up --build
+    ```
 
-cd project-directory
+    Bu komut, backend ve frontend için Docker imajlarını oluşturacak, her bir servis için bir konteyner oluşturacak ve bunları başlatacaktır.
 
-Projeyi Docker Compose kullanarak ayağa kaldırın:
+4. Konteynerler başlatıldıktan sonra uygulamaya erişebilirsiniz:
 
-bash
+    - Backend: Web tarayıcınızı açın ve `http://localhost:8080` adresine gidin.
+    - Frontend: Web tarayıcınızı açın ve `http://localhost:3000` veya `http://localhost:4000` adreslerinden birine gidin, frontend uygulamanızın çalıştığı porta bağlı olarak.
 
-docker-compose up --build
+5. Konteynerleri durdurmak için terminalde Docker Compose çalıştırırken `Ctrl + C` tuşlarına basabilir veya aşağıdaki komutu kullanabilirsiniz:
 
-Bu komut, backend ve frontend için Docker imajlarını oluşturacak, her bir servis için bir konteyner oluşturacak ve bunları başlatacaktır.
-
-Konteynerler başlatıldıktan sonra uygulamaya erişebilirsiniz:
-
-    Backend: Web tarayıcınızı açın ve http://localhost:8080 adresine gidin.
-    Frontend: Web tarayıcınızı açın ve http://localhost:3000 veya http://localhost:4000 adreslerinden birine gidin, frontend uygulamanızın çalıştığı porta bağlı olarak.
-
-Konteynerleri durdurmak için terminalde Docker Compose çalıştırırken Ctrl + C tuşlarına basabilir veya aşağıdaki komutu kullanabilirsiniz:
-
-bash
-
+    ```bash
     docker-compose down
+    ```
 
-Ek Notlar
+## Ek Notlar
 
-    Kodlarda değişiklik yaparsanız, aynı docker-compose up --build komutunu kullanarak konteynerleri yeniden oluşturabilir ve başlatabilirsiniz.
-    Docker Compose'u arka planda çalıştırmak için -d bayrağını ekleyerek kullanabilirsiniz: docker-compose up -d.
+- Kodlarda değişiklik yaparsanız, aynı `docker-compose up --build` komutunu kullanarak konteynerleri yeniden oluşturabilir ve başlatabilirsiniz.
+- Docker Compose'u arka planda çalıştırmak için `-d` bayrağını ekleyerek kullanabilirsiniz: `docker-compose up -d`.
