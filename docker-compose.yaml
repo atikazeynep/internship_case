@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080" # Map your Spring Boot port to the host machine
+    depends_on:
+      - frontend
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000" # Map your React.js development server port to the host machine
+      - "4000:4000"
