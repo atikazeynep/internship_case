@@ -20,8 +20,9 @@ FROM nginx:alpine
 # Copy build output from the previous stage
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Expose port 80 to the outside world
-EXPOSE 80
+# Expose ports to the outside world
+EXPOSE 4000
+EXPOSE 3000
 
 # Default command to start nginx
 CMD ["nginx", "-g", "daemon off;"]
