@@ -21,8 +21,9 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Expose ports to the outside world
-EXPOSE 4000
+
 EXPOSE 3000
+EXPOSE 4000
 
 # Default command to start nginx
 CMD ["nginx", "-g", "daemon off;"]

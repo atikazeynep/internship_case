@@ -1,50 +1,51 @@
-Kartaca Staj Projesi
-Hazırlayan: Atika Zeynep Evmez
+# Internship Application Project
 
-Bu program Kartaca Çekirdekten Yetişenler Programı başvurusu için hazırlanmıştır.
+## Prepared by: Atika Zeynep Evmez
 
-Program basit bir panel içerisinde, dünya haritası üzerinde anormal depremleri gösterebilecek bir web uygulamasıdır.
-Önkoşullar
+This program is prepared for internship application to *** company according to the given description.
 
-Proogramı çalıştırmak için aşağıdaki önkoşulları sağlamalısınız:
+The program is a web application that can display abnormal earthquakes on a world map within a simple panel. In this program, data is obtained in two different ways: 1) Real-time earthquake data is retrieved using the USGS (United States Geological Survey) API. 2) Random earthquake data is generated. These two different types of data are presented on separate pages.
 
-    Docker yüklemiş olmanız gerekiyor. Docker'ı Yükle
-    Docker-compose yüklemiş olmanız gerekiyor. Docker Compose'yi Yükle
+## Prerequisites
 
-Başlarken
+You need to meet the following prerequisites to run the program:
+- You need to have Docker installed. [Install Docker](https://docs.docker.com/get-docker/)
+- You need to have Docker Compose installed. [Install Docker Compose](https://docs.docker.com/compose/install/)
 
-    Depoyu klonlayın:
+## Getting Started
 
-    bash
+1. **Clone the repository:**
 
-git clone git@github.com:atikazeynep/kartaca_internship_case.git
+    ```bash
+    git clone git@github.com:atikazeynep/internship_case.git
+    ```
 
-Proje dizinine gidin:
+2. **Navigate to the project directory:**
 
-bash
+    ```bash
+    cd internship_case
+    ```
 
-cd project-directory
+3. **Start the project using Docker Compose:**
 
-Projeyi Docker Compose kullanarak ayağa kaldırın:
+    ```bash
+    docker-compose up --build
+    ```
 
-bash
+    This command will build Docker images for the backend and frontend, create a container for each service, and start them.
 
-docker-compose up --build
+4. **Once the containers are started, you can access the application:**
 
-Bu komut, backend ve frontend için Docker imajlarını oluşturacak, her bir servis için bir konteyner oluşturacak ve bunları başlatacaktır.
+    - **Backend:** Open your web browser and go to `http://localhost:8080`.
+    - **Frontend:** Open your web browser and go to either `http://localhost:3000` or `http://localhost:4000`, you can see data from USGS API at `http://localhost:3000` and random data at `http://localhost:4000`
 
-Konteynerler başlatıldıktan sonra uygulamaya erişebilirsiniz:
+5. **To stop the containers, you can press `Ctrl + C` in the terminal while Docker Compose is running, or you can use the following command:**
 
-    Backend: Web tarayıcınızı açın ve http://localhost:8080 adresine gidin.
-    Frontend: Web tarayıcınızı açın ve http://localhost:3000 veya http://localhost:4000 adreslerinden birine gidin, frontend uygulamanızın çalıştığı porta bağlı olarak.
-
-Konteynerleri durdurmak için terminalde Docker Compose çalıştırırken Ctrl + C tuşlarına basabilir veya aşağıdaki komutu kullanabilirsiniz:
-
-bash
-
+    ```bash
     docker-compose down
+    ```
 
-Ek Notlar
+## Additional Notes
 
-    Kodlarda değişiklik yaparsanız, aynı docker-compose up --build komutunu kullanarak konteynerleri yeniden oluşturabilir ve başlatabilirsiniz.
-    Docker Compose'u arka planda çalıştırmak için -d bayrağını ekleyerek kullanabilirsiniz: docker-compose up -d.
+- If you make changes to the code, you can rebuild and restart the containers using the same `docker-compose up --build` command.
+- You can run Docker Compose in the background by adding the `-d` flag: `docker-compose up -d`.
